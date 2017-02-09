@@ -9,7 +9,9 @@
 	<form:form method="post" modelAttribute="bookForm" action="/Techreads/books">
 		<form:input path="title" type="text" />
  			<button type="submit">Add</button>
- 		</form:form>
+ 	</form:form>
+
+	<a href=/Techreads/books><button>Cancel</button></a>
 
 </body>
 </html>
