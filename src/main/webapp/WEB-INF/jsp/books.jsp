@@ -13,6 +13,7 @@
 			<c:forEach var="book" items="${books}">
 				<tr>
 					<td><c:out value="${book.title}" /></td>
+					<td><c:out value="${book.author}" /></td>
 					<td><c:url var="deleteUrl" value="/books/delete" />
 						<form id="${bookFormId}" action="${deleteUrl}" method="POST">
 							<input id="book" name="book" type="hidden" value="${book.id}" />
