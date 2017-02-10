@@ -13,6 +13,10 @@ public class Book {
 	Long id;
 	String title;
 	String author;
+	String rating;
+	String status;
+	String date;
+	String coverURL;
 	
 	public Book() {}
 	
@@ -29,4 +33,15 @@ public class Book {
 	public String getAuthor() { return author; }
 	public void setAuthor(String author) { this.author = author; }
 	
+	public String getRating() { return rating; }
+	public void setRating(String rating) { this.rating = rating; }
+	
+	public String getStatus() { return status; }
+	public void setStatus(String status) { this.status = status; }
+	
+	public String getDate() { return date; }
+	public void setDate(String date) { this.date = date; }
+	
+	public String getCoverURL() { return coverURL; }
+	public void setCoverURL(String coverURL) { this.coverURL = coverURL; }
 }
