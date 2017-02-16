@@ -44,6 +44,22 @@ public class BookController {
 		return "view";
 	}
 	
+	@RequestMapping(value = "/edit/{id}")
+	
+	public String edit(@PathVariable("id") long bookId, Model model) {
+		Book book = bookRepository.getOne(bookId);
+		model.addAttribute("book", book);
+		return "edit";
+	}
+	
+	@RequestMapping(value = {"/edit", "/edit/{id}"}, method = POST)
+	
+	public RedirectView edit(@PathVariable("id") long bookId) {
+		Book book = bookRepository.getOne(bookId);
+		bookRepository.saveAndFlush(book);
+		return new RedirectView("/Techreads/books");
+	}
+	
 	@RequestMapping(value = {"", "/"}, method=POST)
 	
 	public RedirectView addBook(Book book) {
