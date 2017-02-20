@@ -28,7 +28,9 @@
 					<td><c:out value="${book.status}" /></td>
 					<td><c:out value="${book.date}" /></td>
 					<td><c:url var="viewUrl" value="/view/${book.id}" />
-						<a href="books/view/${book.id}">View Book</a></td>
+						<form action="books/view/${book.id}">
+							<input type="submit" value="View Book" />
+						</form></td>
 					<td><c:url var="deleteUrl" value="/books/delete" />
 						<form id="${bookFormId}" action="${deleteUrl}" method="POST">
 							<input id="book" name="book" type="hidden" value="${book.id}" />

@@ -28,7 +28,8 @@
 	</table>
 	
 	
-	<a href=/Techreads/books><button>Return</button></a>
+	<a href="/Techreads/books"><button>Return</button></a>
+	<a href="/Techreads/books/edit/${book.id}"><button>Edit</button></a>
 
 
 </body>

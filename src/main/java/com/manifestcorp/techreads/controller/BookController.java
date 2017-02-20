@@ -1,5 +1,6 @@
 package com.manifestcorp.techreads.controller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,11 +49,11 @@ public class BookController {
 	
 	public String edit(@PathVariable("id") long bookId, Model model) {
 		Book book = bookRepository.getOne(bookId);
-		model.addAttribute("book", book);
+		model.addAttribute("bookForm", book);
 		return "edit";
 	}
 	
-	@RequestMapping(value = {"/edit", "/edit/{id}"}, method = POST)
+	@RequestMapping(value ="/edit/{id}", method = POST)
 	
 	public RedirectView edit(@PathVariable("id") long bookId) {
 		Book book = bookRepository.getOne(bookId);
